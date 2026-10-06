@@ -1,7 +1,7 @@
-﻿Console.Write("Enter your name: ");
-string name = Console.ReadLine() ?? "";
+﻿int a = 20;
+int b = 5;
 
-Console.Write("Enter your age: ");
-int age = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine($"Hello {name}, you are {age} years old.");
+Console.WriteLine($"Addition: {a + b}");
+Console.WriteLine($"Subtraction: {a - b}");
+Console.WriteLine($"Multiplication: {a * b}");
+Console.WriteLine($"Division: {a / b}");
