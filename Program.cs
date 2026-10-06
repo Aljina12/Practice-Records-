@@ -1,2 +1,2 @@
-﻿Console.WriteLine("Hello, I am learning C#!");
-Console.WriteLine("This is my first C# practice.");
+﻿Console.WriteLine("Hello, World!");
+Console.WriteLine("I am learning C#.");
