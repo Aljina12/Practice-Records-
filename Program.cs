@@ -1,19 +1,6 @@
-﻿Console.Write("Enter your marks: ");
-int marks = Convert.ToInt32(Console.ReadLine());
+﻿Console.WriteLine("Numbers from 1 to 10:");
 
-if (marks >= 80)
+for (int i = 1; i <= 10; i++)
 {
-    Console.WriteLine("Grade A");
-}
-else if (marks >= 60)
-{
-    Console.WriteLine("Grade B");
-}
-else if (marks >= 40)
-{
-    Console.WriteLine("Grade C");
-}
-else
-{
-    Console.WriteLine("Fail");
+    Console.WriteLine(i);
 }
