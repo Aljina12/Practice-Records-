@@ -1,14 +1,18 @@
-﻿Console.Write("Enter first number: ");
-int first = Convert.ToInt32(Console.ReadLine());
+﻿Student student = new Student();
 
-Console.Write("Enter second number: ");
-int second = Convert.ToInt32(Console.ReadLine());
+student.Name = "Aljina";
+student.Course = "Computing";
 
-int result = AddNumbers(first, second);
+student.DisplayDetails();
 
-Console.WriteLine($"Result: {result}");
-
-static int AddNumbers(int a, int b)
+class Student
 {
-    return a + b;
+    public string Name { get; set; } = "";
+    public string Course { get; set; } = "";
+
+    public void DisplayDetails()
+    {
+        Console.WriteLine($"Name: {Name}");
+        Console.WriteLine($"Course: {Course}");
+    }
 }
