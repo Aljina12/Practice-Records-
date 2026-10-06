@@ -1,0 +1,15 @@
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\bin\Debug\net10.0\Practice-Records-.exe
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\bin\Debug\net10.0\Practice-Records-.deps.json
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\bin\Debug\net10.0\Practice-Records-.runtimeconfig.json
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\bin\Debug\net10.0\Practice-Records-.dll
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\bin\Debug\net10.0\Practice-Records-.pdb
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\obj\Debug\net10.0\Practice-Records-.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\obj\Debug\net10.0\Practice-Records-.AssemblyInfoInputs.cache
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\obj\Debug\net10.0\Practice-Records-.AssemblyInfo.cs
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\obj\Debug\net10.0\Practice-Records-.csproj.CoreCompileInputs.cache
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\obj\Debug\net10.0\Practice-Records-.sourcelink.json
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\obj\Debug\net10.0\Practice-Records-.dll
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\obj\Debug\net10.0\refint\Practice-Records-.dll
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\obj\Debug\net10.0\Practice-Records-.pdb
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\obj\Debug\net10.0\Practice-Records-.genruntimeconfig.cache
+C:\Users\My Laptop\OneDrive\Documents\Practice-Records-\obj\Debug\net10.0\ref\Practice-Records-.dll
