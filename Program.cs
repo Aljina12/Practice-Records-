@@ -1,9 +1,7 @@
-﻿string name = "Aljina";
-int age = 20;
-double height = 5.7;
-bool isStudent = true;
+﻿Console.Write("Enter your name: ");
+string name = Console.ReadLine() ?? "";
 
-Console.WriteLine($"Name: {name}");
-Console.WriteLine($"Age: {age}");
-Console.WriteLine($"Height: {height}");
-Console.WriteLine($"Student: {isStudent}");
+Console.Write("Enter your age: ");
+int age = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"Hello {name}, you are {age} years old.");
