@@ -1,7 +1,8 @@
-﻿int number = 1;
+﻿string[] courses = { "Computing", "BCA", "BBA", "BIT" };
 
-while (number <= 5)
+Console.WriteLine("Available Courses:");
+
+foreach (string course in courses)
 {
-    Console.WriteLine($"Number: {number}");
-    number++;
+    Console.WriteLine(course);
 }
