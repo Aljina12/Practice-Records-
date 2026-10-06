@@ -1,18 +1,21 @@
-﻿Student student = new Student();
+﻿Console.Write("Choose a day (1-3): ");
+int choice = Convert.ToInt32(Console.ReadLine());
 
-student.Name = "Aljina";
-student.Course = "Computing";
-
-student.DisplayDetails();
-
-class Student
+switch (choice)
 {
-    public string Name { get; set; } = "";
-    public string Course { get; set; } = "";
+    case 1:
+        Console.WriteLine("Monday");
+        break;
 
-    public void DisplayDetails()
-    {
-        Console.WriteLine($"Name: {Name}");
-        Console.WriteLine($"Course: {Course}");
-    }
+    case 2:
+        Console.WriteLine("Tuesday");
+        break;
+
+    case 3:
+        Console.WriteLine("Wednesday");
+        break;
+
+    default:
+        Console.WriteLine("Invalid choice");
+        break;
 }
