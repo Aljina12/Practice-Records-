@@ -1,6 +1,7 @@
-﻿Console.WriteLine("Numbers from 1 to 10:");
+﻿int number = 1;
 
-for (int i = 1; i <= 10; i++)
+while (number <= 5)
 {
-    Console.WriteLine(i);
+    Console.WriteLine($"Number: {number}");
+    number++;
 }
