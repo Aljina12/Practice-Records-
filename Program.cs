@@ -1,8 +1,14 @@
-﻿string[] courses = { "Computing", "BCA", "BBA", "BIT" };
+﻿Console.Write("Enter first number: ");
+int first = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Available Courses:");
+Console.Write("Enter second number: ");
+int second = Convert.ToInt32(Console.ReadLine());
 
-foreach (string course in courses)
+int result = AddNumbers(first, second);
+
+Console.WriteLine($"Result: {result}");
+
+static int AddNumbers(int a, int b)
 {
-    Console.WriteLine(course);
+    return a + b;
 }
