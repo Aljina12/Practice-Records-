@@ -194,3 +194,12 @@ namespace csharp
             Console.WriteLine("Student: " + Name + ", Age: " + Age);
         }
     }
+
+        class Task7
+    {
+        public static void Run()
+        {
+            Student student = new Student();
+            student.Display();
+        }
+    }
