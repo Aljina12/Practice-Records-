@@ -44,3 +44,19 @@ namespace csharp
         }
     }
 }
+
+    class Circle
+    {
+        public const double PI = 3.14;
+        public double Radius = 5;
+
+        public double CalculateArea()
+        {
+            return PI * Radius * Radius;
+        }
+
+        public double CalculatePerimeter()
+        {
+            return 2 * PI * Radius;
+        }
+    }
