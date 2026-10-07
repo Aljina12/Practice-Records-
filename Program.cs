@@ -60,3 +60,16 @@ namespace csharp
             return 2 * PI * Radius;
         }
     }
+
+        class Task2
+    {
+        public static void Run()
+        {
+            Circle circle = new Circle();
+
+            Console.WriteLine("PI: " + Circle.PI);
+            Console.WriteLine("Radius: " + circle.Radius);
+            Console.WriteLine("Area: " + circle.CalculateArea());
+            Console.WriteLine("Perimeter: " + circle.CalculatePerimeter());
+        }
+    }
