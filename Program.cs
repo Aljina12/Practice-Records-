@@ -203,3 +203,19 @@ namespace csharp
             student.Display();
         }
     }
+
+        class Rectangle
+    {
+        public double Length = 8;
+        public double Width = 4;
+
+        public double CalculateArea()
+        {
+            return Length * Width;
+        }
+
+        public double CalculatePerimeter()
+        {
+            return 2 * (Length + Width);
+        }
+    }
