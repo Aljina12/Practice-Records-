@@ -139,3 +139,21 @@ namespace csharp
             Console.WriteLine("Birthdate + 10 days: " + birthDate.AddDays(10));
         }
     }
+
+        class Task6
+    {
+        public static void Run()
+        {
+            List<string> fruits = new List<string>();
+            fruits.Add("Apple");
+            fruits.Add("Mango");
+            fruits.Add("Banana");
+            fruits.Add("Orange");
+            fruits.Remove("Banana");
+
+            foreach (string fruit in fruits)
+            {
+                Console.WriteLine(fruit);
+            }
+        }
+    }
