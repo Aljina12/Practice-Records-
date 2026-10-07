@@ -73,3 +73,34 @@ namespace csharp
             Console.WriteLine("Perimeter: " + circle.CalculatePerimeter());
         }
     }
+
+        class Task3
+    {
+        public static void Run()
+        {
+            byte b = 200;
+            short s = 30000;
+            int i = 2000000;
+            long l = 9000000000;
+            float f = 3.14f;
+            double d = 3.14159265;
+            decimal m = 19.99m;
+            char c = 'A';
+            bool flag = true;
+
+            string numberText = 42.ToString();
+            double textNumber = double.Parse("3.14");
+
+            Console.WriteLine("byte: " + b);
+            Console.WriteLine("short: " + s);
+            Console.WriteLine("int: " + i);
+            Console.WriteLine("long: " + l);
+            Console.WriteLine("float: " + f);
+            Console.WriteLine("double: " + d);
+            Console.WriteLine("decimal: " + m);
+            Console.WriteLine("char: " + c);
+            Console.WriteLine("bool: " + flag);
+            Console.WriteLine("int 42 to string: " + numberText);
+            Console.WriteLine("string 3.14 to double: " + textNumber);
+        }
+    }
