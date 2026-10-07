@@ -232,3 +232,16 @@ namespace csharp
             Console.WriteLine("Rectangle perimeter: " + rectangle.CalculatePerimeter());
         }
     }
+
+        class Temperature
+    {
+        public double ToFahrenheit(double celsius)
+        {
+            return celsius * 9 / 5 + 32;
+        }
+
+        public double ToCelsius(double fahrenheit)
+        {
+            return (fahrenheit - 32) * 5 / 9;
+        }
+    }
