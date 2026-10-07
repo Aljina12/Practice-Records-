@@ -104,3 +104,21 @@ namespace csharp
             Console.WriteLine("string 3.14 to double: " + textNumber);
         }
     }
+
+        class Task4
+    {
+        public static void Run()
+        {
+            int[] numbers = { 7, 3, 9, 1, 5 };
+
+            Array.Sort(numbers);
+            Array.Reverse(numbers);
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+
+            Console.WriteLine("Position of 5: " + Array.IndexOf(numbers, 5));
+        }
+    }
