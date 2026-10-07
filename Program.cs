@@ -168,3 +168,18 @@ namespace csharp
             {
                 Console.WriteLine(item.Key + ": " + item.Value);
             }
+
+                    static void Main(string[] args)
+        {
+            Task1.Run();
+            Console.WriteLine();
+            Task2.Run();
+            Console.WriteLine();
+            Task3.Run();
+            Console.WriteLine();
+            Task4.Run();
+            Console.WriteLine();
+            Task5.Run();
+            Console.WriteLine();
+            Task6.Run();
+        }
