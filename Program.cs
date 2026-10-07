@@ -122,3 +122,20 @@ namespace csharp
             Console.WriteLine("Position of 5: " + Array.IndexOf(numbers, 5));
         }
     }
+
+        class Task5
+    {
+        public static void Run()
+        {
+            DateTime birthDate = new DateTime(2005, 5, 15);
+            DateTime today = DateTime.Now;
+
+            TimeSpan age = today - birthDate;
+            int years = (int)age.TotalDays / 365;
+
+            Console.WriteLine("Birthdate: " + birthDate);
+            Console.WriteLine("Current date: " + today);
+            Console.WriteLine("Age in years: " + years);
+            Console.WriteLine("Birthdate + 10 days: " + birthDate.AddDays(10));
+        }
+    }
