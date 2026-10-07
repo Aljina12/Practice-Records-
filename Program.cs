@@ -245,3 +245,14 @@ namespace csharp
             return (fahrenheit - 32) * 5 / 9;
         }
     }
+
+        class Task9
+    {
+        public static void Run()
+        {
+            Temperature temperature = new Temperature();
+
+            Console.WriteLine("100 C in F: " + temperature.ToFahrenheit(100));
+            Console.WriteLine("212 F in C: " + temperature.ToCelsius(212));
+        }
+    }
