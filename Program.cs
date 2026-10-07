@@ -219,3 +219,16 @@ namespace csharp
             return 2 * (Length + Width);
         }
     }
+
+        class Task8
+    {
+        public static void Run()
+        {
+            Rectangle rectangle = new Rectangle();
+
+            Console.WriteLine("Length: " + rectangle.Length);
+            Console.WriteLine("Width: " + rectangle.Width);
+            Console.WriteLine("Rectangle area: " + rectangle.CalculateArea());
+            Console.WriteLine("Rectangle perimeter: " + rectangle.CalculatePerimeter());
+        }
+    }
