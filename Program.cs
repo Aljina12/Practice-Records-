@@ -19,3 +19,28 @@ switch (choice)
         Console.WriteLine("Invalid choice");
         break;
 }
+
+using System;
+using System.Collections.Generic;
+
+namespace csharp
+{
+    class Task1
+    {
+        public static void Run()
+        {
+            string userName = "Sujal";
+            int luckyNumber = 7;
+
+            Console.WriteLine($"Hello, {userName}! Your lucky number is {luckyNumber}.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Task1.Run();
+        }
+    }
+}
