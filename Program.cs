@@ -256,3 +256,18 @@ namespace csharp
             Console.WriteLine("212 F in C: " + temperature.ToCelsius(212));
         }
     }
+
+        class BankAccount
+    {
+        public double Balance = 1000;
+
+        public void Deposit(double amount)
+        {
+            Balance = Balance + amount;
+        }
+
+        public void Withdraw(double amount)
+        {
+            Balance = Balance - amount;
+        }
+    }
