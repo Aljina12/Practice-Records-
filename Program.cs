@@ -157,3 +157,14 @@ namespace csharp
             }
         }
     }
+
+                Dictionary<int, string> fruitDict = new Dictionary<int, string>();
+            fruitDict.Add(1, "Apple");
+            fruitDict.Add(2, "Mango");
+            fruitDict.Add(3, "Banana");
+            fruitDict.Add(4, "Orange");
+
+            foreach (var item in fruitDict)
+            {
+                Console.WriteLine(item.Key + ": " + item.Value);
+            }
