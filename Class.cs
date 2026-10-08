@@ -21,3 +21,16 @@
             animal.MakeSound();
         }
     }
+
+        class NumberChecker
+    {
+        public bool IsEven(int number)
+        {
+            return number % 2 == 0;
+        }
+
+        public bool IsPositive(int number)
+        {
+            return number > 0;
+        }
+    }
