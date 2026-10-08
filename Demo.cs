@@ -22,3 +22,20 @@
             Console.WriteLine("Total: " + shop.GetTotal());
         }
     } 
+
+        class MarksCalculator
+    {
+        public int Math = 80;
+        public int Science = 75;
+        public int English = 90;
+
+        public int GetTotal()
+        {
+            return Math + Science + English;
+        }
+
+        public double GetAverage()
+        {
+            return GetTotal() / 3.0;
+        }
+    }
