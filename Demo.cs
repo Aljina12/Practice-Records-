@@ -51,3 +51,22 @@
             Console.WriteLine("Is -3 positive: " + checker.IsPositive(-3));
         }
     }
+
+        class Greeting
+    {
+        public string GetMessage(string name, int hour)
+        {
+            if (hour < 12)
+            {
+                return "Good morning, " + name;
+            }
+            else if (hour < 18)
+            {
+                return "Good afternoon, " + name;
+            }
+            else
+            {
+                return "Good evening, " + name;
+            }
+        }
+    }
