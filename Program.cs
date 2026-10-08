@@ -294,3 +294,15 @@ namespace csharp
             return a / b;
         }
     }
+
+
+        class Task17
+    {
+        public static void Run()
+        {
+            MarksCalculator marks = new MarksCalculator();
+
+            Console.WriteLine("Total marks: " + marks.GetTotal());
+            Console.WriteLine("Average marks: " + marks.GetAverage());
+        }
+    }
