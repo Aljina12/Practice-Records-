@@ -70,3 +70,15 @@
             }
         }
     }
+
+        class Task19
+    {
+        public static void Run()
+        {
+            Greeting greeting = new Greeting();
+
+            Console.WriteLine(greeting.GetMessage("Sujal", 9));
+            Console.WriteLine(greeting.GetMessage("Sujal", 14));
+            Console.WriteLine(greeting.GetMessage("Sujal", 20));
+        }
+    }
