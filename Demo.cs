@@ -39,3 +39,15 @@
             return GetTotal() / 3.0;
         }
     }
+
+        class Task18
+    {
+        public static void Run()
+        {
+            NumberChecker checker = new NumberChecker();
+
+            Console.WriteLine("Is 8 even: " + checker.IsEven(8));
+            Console.WriteLine("Is 7 even: " + checker.IsEven(7));
+            Console.WriteLine("Is -3 positive: " + checker.IsPositive(-3));
+        }
+    }
