@@ -82,3 +82,30 @@
             Console.WriteLine(greeting.GetMessage("Sujal", 20));
         }
     }
+
+    
+class Shop
+{
+    public string ItemName { get; set; } = "Notebook";
+    public decimal Price { get; set; } = 120m;
+    public int Quantity { get; set; } = 3;
+
+    public decimal GetTotal()
+    {
+        return Price * Quantity;
+    }
+}
+
+class Task16
+{
+    public static void Run()
+    {
+        Shop shop = new Shop();
+
+        Console.WriteLine("=== Shop Details ===");
+        Console.WriteLine($"Item: {shop.ItemName}");
+        Console.WriteLine($"Price: Rs. {shop.Price:F2}");
+        Console.WriteLine($"Quantity: {shop.Quantity}");
+        Console.WriteLine($"Total: Rs. {shop.GetTotal():F2}");
+    }
+}
