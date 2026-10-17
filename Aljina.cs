@@ -36,3 +36,19 @@
             Console.WriteLine("After reset: " + counter.Count);
         }
     }
+
+    using System;
+
+class Program
+{
+    static void Main()
+    {
+        string name = "Sujal";
+        int age = 21;
+        string course = "C# Programming";
+
+        Console.WriteLine($"Name: {name}");
+        Console.WriteLine($"Age: {age}");
+        Console.WriteLine($"Course: {course}");
+    }
+}
