@@ -52,3 +52,21 @@ class Program
         Console.WriteLine($"Course: {course}");
     }
 }
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        const double PI = 3.14159;
+        double radius = 5;
+
+        double area = PI * radius * radius;
+        double circumference = 2 * PI * radius;
+
+        Console.WriteLine($"Radius: {radius}");
+        Console.WriteLine($"Area: {area:F2}");
+        Console.WriteLine($"Circumference: {circumference:F2}");
+    }
+}
