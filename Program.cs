@@ -31,3 +31,44 @@ class DaySelector
     }
 }
 
+using System;
+
+class BankAccount
+{
+    public decimal Balance { get; private set; } = 1000m;
+
+    public void Deposit(decimal amount)
+    {
+        if (amount <= 0)
+        {
+            Console.WriteLine("Deposit amount must be greater than zero.");
+            return;
+        }
+
+        Balance += amount;
+        Console.WriteLine($"Deposited: Rs. {amount:F2}");
+    }
+
+    public void Withdraw(decimal amount)
+    {
+        if (amount <= 0)
+        {
+            Console.WriteLine("Withdrawal amount must be greater than zero.");
+            return;
+        }
+
+        if (amount > Balance)
+        {
+            Console.WriteLine("Insufficient balance.");
+            return;
+        }
+
+        Balance -= amount;
+        Console.WriteLine($"Withdrawn: Rs. {amount:F2}");
+    }
+
+    public void DisplayBalance()
+    {
+        Console.WriteLine($"Current balance: Rs. {Balance:F2}");
+    }
+}
