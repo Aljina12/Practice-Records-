@@ -43,3 +43,69 @@ class Program
         employee.DisplayDetails();
     }
 }
+
+using System;
+
+// Task 22: Electricity Bill Calculator
+class ElectricityBill
+{
+    public string CustomerName { get; set; } = "Sujal";
+    public int UnitsConsumed { get; set; } = 150;
+
+    public decimal CalculateBill()
+    {
+        int units = UnitsConsumed;
+        decimal bill = 0;
+
+        if (units < 0)
+        {
+            return -1;
+        }
+
+        if (units <= 20)
+        {
+            bill = units * 4;
+        }
+        else if (units <= 50)
+        {
+            bill = (20 * 4) + ((units - 20) * 7);
+        }
+        else if (units <= 100)
+        {
+            bill = (20 * 4) + (30 * 7) + ((units - 50) * 8.5m);
+        }
+        else
+        {
+            bill = (20 * 4) + (30 * 7) + (50 * 8.5m)
+                   + ((units - 100) * 10);
+        }
+
+        return bill;
+    }
+
+    public void DisplayBill()
+    {
+        Console.WriteLine("=== Electricity Bill ===");
+        Console.WriteLine($"Customer: {CustomerName}");
+        Console.WriteLine($"Units Consumed: {UnitsConsumed}");
+
+        decimal bill = CalculateBill();
+
+        if (bill < 0)
+        {
+            Console.WriteLine("Invalid units consumed.");
+            return;
+        }
+
+        Console.WriteLine($"Total Bill: Rs. {bill:F2}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        ElectricityBill electricityBill = new ElectricityBill();
+        electricityBill.DisplayBill();
+    }
+}
