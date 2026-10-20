@@ -109,3 +109,70 @@ class Program
         electricityBill.DisplayBill();
     }
 }
+
+using System;
+
+// Task 23: Bank Account Management
+class BankAccount
+{
+    public string AccountHolder { get; set; } = "Sujal";
+
+    public decimal Balance { get; private set; } = 10000m;
+
+    public void Deposit(decimal amount)
+    {
+        if (amount <= 0)
+        {
+            Console.WriteLine("Deposit amount must be positive.");
+            return;
+        }
+
+        Balance += amount;
+        Console.WriteLine($"Deposited: Rs. {amount:F2}");
+    }
+
+    public void Withdraw(decimal amount)
+    {
+        if (amount <= 0)
+        {
+            Console.WriteLine("Withdrawal amount must be positive.");
+            return;
+        }
+
+        if (amount > Balance)
+        {
+            Console.WriteLine("Insufficient balance.");
+            return;
+        }
+
+        Balance -= amount;
+        Console.WriteLine($"Withdrawn: Rs. {amount:F2}");
+    }
+
+    public void DisplayBalance()
+    {
+        Console.WriteLine($"Account Holder: {AccountHolder}");
+        Console.WriteLine($"Current Balance: Rs. {Balance:F2}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        BankAccount account = new BankAccount();
+
+        Console.WriteLine("=== Bank Account Management ===");
+
+        account.DisplayBalance();
+
+        Console.WriteLine();
+
+        account.Deposit(5000m);
+        account.Withdraw(2000m);
+
+        Console.WriteLine();
+
+        account.DisplayBalance();
+    }
+}
