@@ -70,3 +70,61 @@ class Program
         Console.WriteLine($"Circumference: {circumference:F2}");
     }
 }
+
+using System;
+using System.Linq;
+
+class PasswordChecker
+{
+    public static string CheckStrength(string password)
+    {
+        if (string.IsNullOrEmpty(password))
+        {
+            return "Invalid: Password cannot be empty.";
+        }
+
+        int score = 0;
+
+        if (password.Length >= 8)
+            score++;
+
+        if (password.Any(char.IsUpper))
+            score++;
+
+        if (password.Any(char.IsLower))
+            score++;
+
+        if (password.Any(char.IsDigit))
+            score++;
+
+        if (password.Any(c => !char.IsLetterOrDigit(c)))
+            score++;
+
+        if (password.Length < 8)
+            return "Weak: Use at least 8 characters.";
+
+        if (score <= 2)
+            return "Weak";
+
+        if (score <= 4)
+            return "Moderate";
+
+        return "Strong";
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("=== Password Strength Checker ===");
+
+        Console.Write("Enter a password: ");
+
+        string password = Console.ReadLine() ?? "";
+
+        string result = PasswordChecker.CheckStrength(password);
+
+        Console.WriteLine($"Password Strength: {result}");
+    }
+}
