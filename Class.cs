@@ -1,58 +1,29 @@
-    class Animal
-    {
-        public string Name = "Tommy";
-        public string Sound = "Woof";
-
-        public void MakeSound()
-        {
-            Console.WriteLine(Name + " says " + Sound);
-        }
-    }
-
-        class Task15
-    {
-        public static void Run()
-        {
-            Animal animal = new Animal();
-            animal.MakeSound();
-
-            animal.Name = "Kitty";
-            animal.Sound = "Meow";
-            animal.MakeSound();
-        }
-    }
-
-        class NumberChecker
-    {
-        public bool IsEven(int number)
-        {
-            return number % 2 == 0;
-        }
-
-        public bool IsPositive(int number)
-        {
-            return number > 0;
-        }
-    }
-
-    
 using System;
 
-class Animal
+class Employee
 {
-    public string Name { get; set; } = "Animal";
+    public string EmployeeName { get; set; } = "Sujal";
+    public decimal BasicSalary { get; set; } = 30000m;
+    public decimal BonusPercentage { get; set; } = 10m;
 
-    public void Eat()
+    public decimal CalculateBonus()
     {
-        Console.WriteLine($"{Name} is eating.");
+        return BasicSalary * BonusPercentage / 100m;
     }
-}
 
-class Dog : Animal
-{
-    public void Bark()
+    public decimal CalculateTotalSalary()
     {
-        Console.WriteLine($"{Name} is barking.");
+        return BasicSalary + CalculateBonus();
+    }
+
+    public void DisplaySalary()
+    {
+        Console.WriteLine("Employee Salary Details");
+        Console.WriteLine("----------------------------");
+        Console.WriteLine($"Employee: {EmployeeName}");
+        Console.WriteLine($"Basic Salary: Rs. {BasicSalary:F2}");
+        Console.WriteLine($"Bonus: Rs. {CalculateBonus():F2}");
+        Console.WriteLine($"Total Salary: Rs. {CalculateTotalSalary():F2}");
     }
 }
 
@@ -60,11 +31,7 @@ class Program
 {
     static void Main()
     {
-        Dog dog = new Dog();
-
-        dog.Name = "Buddy";
-
-        dog.Eat();
-        dog.Bark();
+        Employee employee = new Employee();
+        employee.DisplaySalary();
     }
 }
