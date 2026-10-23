@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
+    <title>Digital Clock</title>
 
     <style>
         * {
@@ -12,187 +12,67 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #eef2f7;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: white;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
             margin: 0;
         }
 
-        .calculator {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            width: 320px;
-            box-shadow: 0 5px 20px #0002;
-        }
-
-        h2 {
+        .clock-container {
             text-align: center;
+            padding: 35px;
+            border: 1px solid #ffffff40;
+            border-radius: 20px;
+            background: #ffffff10;
+            box-shadow: 0 8px 30px #0003;
         }
 
-        #display {
-            width: 100%;
-            height: 55px;
-            margin-bottom: 15px;
-            text-align: right;
+        h1 {
             font-size: 25px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
+            font-weight: normal;
         }
 
-        .buttons {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
+        #time {
+            font-size: clamp(35px, 8vw, 65px);
+            font-weight: bold;
+            margin: 25px 0;
         }
 
-        button {
-            padding: 16px 8px;
-            border: none;
-            border-radius: 8px;
-            background: #e8edf5;
+        #date {
             font-size: 18px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #cdd8e8;
-        }
-
-        .operator {
-            background: #cfe2ff;
-        }
-
-        .clear {
-            background: #ffcccc;
-        }
-
-        .equals {
-            background: #b9f6ca;
+            color: #cbd5e1;
         }
     </style>
 </head>
 <body>
 
-    <div class="calculator">
-        <h2>Calculator</h2>
-
-        <input type="text" id="display" value="0" readonly>
-
-        <div class="buttons">
-            <button class="clear" onclick="clearDisplay()">C</button>
-            <button onclick="deleteLast()">DEL</button>
-            <button class="operator" onclick="chooseOperator('%')">%</button>
-            <button class="operator" onclick="chooseOperator('/')">÷</button>
-
-            <button onclick="addNumber('7')">7</button>
-            <button onclick="addNumber('8')">8</button>
-            <button onclick="addNumber('9')">9</button>
-            <button class="operator" onclick="chooseOperator('*')">×</button>
-
-            <button onclick="addNumber('4')">4</button>
-            <button onclick="addNumber('5')">5</button>
-            <button onclick="addNumber('6')">6</button>
-            <button class="operator" onclick="chooseOperator('-')">−</button>
-
-            <button onclick="addNumber('1')">1</button>
-            <button onclick="addNumber('2')">2</button>
-            <button onclick="addNumber('3')">3</button>
-            <button class="operator" onclick="chooseOperator('+')">+</button>
-
-            <button onclick="addNumber('0')">0</button>
-            <button onclick="addDecimal()">.</button>
-            <button class="equals" onclick="calculate()">=</button>
-        </div>
+    <div class="clock-container">
+        <h1>Digital Clock</h1>
+        <div id="time">00:00:00</div>
+        <div id="date"></div>
     </div>
 
     <script>
-        const display = document.getElementById("display");
+        function updateClock() {
+            const now = new Date();
 
-        let firstNumber = null;
-        let operator = null;
-        let startNewNumber = true;
+            const time = now.toLocaleTimeString();
+            const date = now.toLocaleDateString(undefined, {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
 
-        function addNumber(number) {
-            if (startNewNumber || display.value === "Error") {
-                display.value = number;
-                startNewNumber = false;
-            } else {
-                display.value += number;
-            }
+            document.getElementById("time").textContent = time;
+            document.getElementById("date").textContent = date;
         }
 
-        function addDecimal() {
-            if (startNewNumber || display.value === "Error") {
-                display.value = "0.";
-                startNewNumber = false;
-            } else if (!display.value.includes(".")) {
-                display.value += ".";
-            }
-        }
-
-        function chooseOperator(selectedOperator) {
-            firstNumber = Number(display.value);
-            operator = selectedOperator;
-            startNewNumber = true;
-        }
-
-        function calculate() {
-            if (operator === null || firstNumber === null) return;
-
-            const secondNumber = Number(display.value);
-            let result;
-
-            switch (operator) {
-                case "+":
-                    result = firstNumber + secondNumber;
-                    break;
-                case "-":
-                    result = firstNumber - secondNumber;
-                    break;
-                case "*":
-                    result = firstNumber * secondNumber;
-                    break;
-                case "/":
-                    result = secondNumber === 0
-                        ? "Error"
-                        : firstNumber / secondNumber;
-                    break;
-                case "%":
-                    result = secondNumber === 0
-                        ? "Error"
-                        : firstNumber % secondNumber;
-                    break;
-            }
-
-            display.value = typeof result === "number"
-                ? String(Number(result.toFixed(8)))
-                : result;
-
-            firstNumber = null;
-            operator = null;
-            startNewNumber = true;
-        }
-
-        function clearDisplay() {
-            display.value = "0";
-            firstNumber = null;
-            operator = null;
-            startNewNumber = true;
-        }
-
-        function deleteLast() {
-            if (startNewNumber || display.value === "Error") {
-                display.value = "0";
-                startNewNumber = true;
-                return;
-            }
-
-            display.value = display.value.slice(0, -1) || "0";
-        }
+        updateClock();
+        setInterval(updateClock, 1000);
     </script>
 
 </body>
