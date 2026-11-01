@@ -37,3 +37,18 @@ h1 {
     font-size: 18px;
     color: #cbd5e1;
 }
+
+@media (max-width: 480px) {
+    .clock-container {
+        width: calc(100% - 30px);
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    #date {
+        font-size: 15px;
+    }
+}
