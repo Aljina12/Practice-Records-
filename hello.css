@@ -26,3 +26,14 @@ h1 {
     font-size: 25px;
     font-weight: normal;
 }
+
+#time {
+    font-size: clamp(35px, 8vw, 65px);
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+#date {
+    font-size: 18px;
+    color: #cbd5e1;
+}
